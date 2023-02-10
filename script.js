@@ -26,3 +26,11 @@ function updateCountdown() {
   minutes.innerHTML = m < 10 ? '0' + m : m;
   seconds.innerHTML = s < 10 ? '0' + s : s;
 }
+
+
+setTimeout(() => {
+  loading.remove();
+  countdown.style.display = 'flex';
+}, 1000);
+
+setInterval(updateCountdown, 1000);
